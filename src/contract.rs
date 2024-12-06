@@ -489,6 +489,11 @@ pub fn query(deps: Deps, _env: Env, msg: QueryMsg) -> StdResult<Binary> {
     }
 }
 
+pub struct OfferRespIndexes<'a> {
+    pub id: UniqueIndex<'a, u16, OfferResp, (&'a, Addr, u16)>,
+    // pub borrow: MultiIndex<'a, u16, OfferResp, (&'a, Addr, u16)>
+}
+
 mod query {
     use super::*;
 
