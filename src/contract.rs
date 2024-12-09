@@ -120,7 +120,7 @@ mod exec {
         let start_time = env.block.time.seconds();
 
         let offer = OfferResp {
-            offer_id: offer_index + 1,
+            offer_id: offer_index + 2,
             owner: info.sender.clone(),
             amount,
             start_time,
